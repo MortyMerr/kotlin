@@ -11262,6 +11262,11 @@ public class FirBlackBoxCodegenTestGenerated extends AbstractFirBlackBoxCodegenT
             runTest("compiler/testData/codegen/box/functions/recursiveIncrementCall.kt");
         }
 
+        @TestMetadata("typeParametersInImplicitCast.kt")
+        public void testTypeParametersInImplicitCast() throws Exception {
+            runTest("compiler/testData/codegen/box/functions/typeParametersInImplicitCast.kt");
+        }
+
         @TestMetadata("typeParametersInLocalFunction.kt")
         public void testTypeParametersInLocalFunction() throws Exception {
             runTest("compiler/testData/codegen/box/functions/typeParametersInLocalFunction.kt");
