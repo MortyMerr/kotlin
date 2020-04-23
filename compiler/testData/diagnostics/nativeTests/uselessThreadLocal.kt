@@ -78,5 +78,4 @@ class NotGlobalThreadLocal3 {
 @ThreadLocal
 object SingletonWithThreadLocal {
     var mutableField = 0
-<<<<<<< HEAD
 }
