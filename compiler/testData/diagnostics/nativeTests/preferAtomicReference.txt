@@ -1,0 +1,98 @@
+package
+
+public var global: MutableBox
+
+public final class AtomicInt {
+    public constructor AtomicInt(/*0*/ x: kotlin.Int)
+    public final val x: kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+public final class AtomicLong {
+    public constructor AtomicLong(/*0*/ x: kotlin.Int)
+    public final val x: kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+public final class AtomicReference {
+    public constructor AtomicReference(/*0*/ wrapped: MutableBox)
+    public final val wrapped: MutableBox
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+public final data class DataClass {
+    public constructor DataClass(/*0*/ l: kotlin.Int)
+    public final val l: kotlin.Int
+    public final operator /*synthesized*/ fun component1(): kotlin.Int
+    public final /*synthesized*/ fun copy(/*0*/ l: kotlin.Int = ...): DataClass
+    public open override /*1*/ /*synthesized*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*synthesized*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*synthesized*/ fun toString(): kotlin.String
+}
+
+public final class ImmutableBox {
+    public constructor ImmutableBox(/*0*/ x: kotlin.Int)
+    public final val x: kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+public final class MutableBox {
+    public constructor MutableBox(/*0*/ x: kotlin.Int)
+    public final var x: kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+public object Singleton {
+    private constructor Singleton()
+    public final val atomicInt: AtomicInt
+    public final val atomicLong: AtomicLong
+    public final val box: MutableBox
+    public final val boxAtomic: AtomicReference
+    public final val boxImmutable: ImmutableBox
+    public final val boxPropertyReadOnly: MutableBox
+    public final var boxPropertyWithoutBacking: MutableBox
+    public final val dataClass: DataClass
+    public final val primitve: kotlin.Int = 0
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+@kotlin.native.concurrent.ThreadLocal public object SingletonThreadLocal {
+    private constructor SingletonThreadLocal()
+    public final val box: MutableBox
+    public final val boxAtomic: AtomicReference
+    public final val boxImmutable: ImmutableBox
+    public final val boxPropertyReadOnly: MutableBox
+    public final var boxPropertyWithoutBacking: MutableBox
+    public final val primitve: kotlin.Int = 0
+    public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+    public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+    public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+}
+
+package kotlin {
+
+    package kotlin.native {
+
+        package kotlin.native.concurrent {
+
+            @kotlin.annotation.Target(allowedTargets = {AnnotationTarget.CLASS}) public final annotation class ThreadLocal : kotlin.Annotation {
+                public constructor ThreadLocal()
+                public open override /*1*/ /*fake_override*/ fun equals(/*0*/ other: kotlin.Any?): kotlin.Boolean
+                public open override /*1*/ /*fake_override*/ fun hashCode(): kotlin.Int
+                public open override /*1*/ /*fake_override*/ fun toString(): kotlin.String
+            }
+        }
+    }
+}

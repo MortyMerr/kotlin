@@ -20,6 +20,11 @@ private val DIAGNOSTIC_FACTORY_TO_RENDERER by lazy {
             ErrorsNative.INCOMPATIBLE_THROWS_INHERITED, "Member inherits different @Throws filters from {0}",
             Renderers.commaSeparated(Renderers.NAME)
         )
+        put(ErrorsNative.MUTABLE_ENUM, "Enum mutation after init is not possible")
+        put(ErrorsNative.MUTABLE_SINGLETON, "Singleton mutation without @ThreadLocal is not possible")
+        put(ErrorsNative.USELESS_SHARED_IMMUTABLE, "SharedImmutable is only needed for globally declared `val` or `var` with delegate")
+        put(ErrorsNative.USELESS_THREAD_LOCAL, "ThreadLocal is only needed for globally declared `val` or `var` with delegate")
+        put(ErrorsNative.PREFER_ATOMIC_REFERENCE, "Prefer explicitly frozen references usage")
     }
 }
 
